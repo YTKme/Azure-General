@@ -1,2 +1,2 @@
-# Azure-General
+# Azure General
 Azure General
