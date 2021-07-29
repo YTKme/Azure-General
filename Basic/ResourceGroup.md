@@ -68,7 +68,7 @@ PS> New-AzResourceGroup RG01 "South Central US"
 ### Example 3: Create a Resource Group with Tags
 
 This command creates an empty resource group. This command is the same
-as the command in [Example 1](#Example-1-Create-an-Empty-Resource-Group),
+as the command in [Example 1](#example-1-create-an-empty-resource-group),
 except that it assigns tags to the resource group. The first tag, named
 Empty, can be used to identify resource groups that have no resources.
 The second tag is named Department and has a value of Marketing. You can
