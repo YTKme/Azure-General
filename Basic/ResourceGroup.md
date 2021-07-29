@@ -14,6 +14,11 @@ you specify a location for the resource group, you are specifying where
 that metadata is stored. For compliance reasons, you may need to ensure
 that your data is stored in a particular region.
 
+At minimum, a **Resource Group** need to be created with a **Name** and
+**Location**. The **Location** can be obtain using
+[Get-AzResourceProvider](https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azresourceprovider)
+after [Connect-AzAccount](https://docs.microsoft.com/en-us/powershell/module/az.accounts/connect-azaccount).
+
 ## PowerShell
 
 The `New-AzResourceGroup` cmdlet creates an Azure resource group. You
@@ -39,6 +44,39 @@ New-AzResourceGroup
    [-WhatIf]
    [-Confirm]
    [<CommonParameters>]
+```
+
+### Example 1: Create an Empty Resource Group
+
+This command creates a resource group that has no resources. You can use
+the [New-AzResource](https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresource)
+or [New-AzResourceGroupDeployment](https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroupdeployment)
+cmdlets to add resources and deployments to this resource group.
+
+```powershell
+PS> New-AzResourceGroup -Name RG01 -Location "South Central US"
+```
+
+### Example 2: Create an Empty Resource Group Using Positional Parameters
+
+This command creates a resource group that has no resources.
+
+```powershell
+PS> New-AzResourceGroup RG01 "South Central US"
+```
+
+### Example 3: Create a Resource Group with Tags
+
+This command creates an empty resource group. This command is the same
+as the command in [Example 1](#Example-1-Create-an-Empty-Resource-Group),
+except that it assigns tags to the resource group. The first tag, named
+Empty, can be used to identify resource groups that have no resources.
+The second tag is named Department and has a value of Marketing. You can
+use a tag such as this one to categorize resource groups for
+administration or budgeting.
+
+```powershell
+PS> New-AzResourceGroup -Name RG01 -Location "South Central US" -Tag @{Empty=$null; Department="Marketing"}
 ```
 
 ## Reference
