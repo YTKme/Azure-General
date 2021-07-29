@@ -20,8 +20,9 @@ The `New-AzResourceGroup` cmdlet creates an Azure resource group. You
 can create a resource group by using just a name and location, and then
 use the New-AzResource cmdlet to create resources to add to the resource
 group. To add a deployment to an existing resource group, use the
-`New-AzResourceGroupDeployment` cmdlet. To add a resource to an existing
-resource group, use the `[New-AzResource](https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresource)`
+[New-AzResourceGroupDeployment](https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroupdeployment)
+cmdlet. To add a resource to an existing resource group, use the
+[New-AzResource](https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresource)
 cmdlet. An Azure resource is a user-managed Azure entity, such as a
 database server, database, or website. An Azure resource group is a
 collection of Azure resources that are deployed as a unit.
