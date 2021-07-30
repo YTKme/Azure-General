@@ -56,7 +56,7 @@ or [New-AzResourceGroupDeployment](https://docs.microsoft.com/en-us/powershell/m
 cmdlets to add resources and deployments to this resource group.
 
 ```powershell
-PS> New-AzResourceGroup -Name RG01 -Location "South Central US"
+PS > New-AzResourceGroup -Name RG01 -Location "South Central US"
 ```
 
 #### Example 2: Create an Empty Resource Group Using Positional Parameters
@@ -64,7 +64,7 @@ PS> New-AzResourceGroup -Name RG01 -Location "South Central US"
 This command creates a resource group that has no resources.
 
 ```powershell
-PS> New-AzResourceGroup RG01 "South Central US"
+PS > New-AzResourceGroup RG01 "South Central US"
 ```
 
 #### Example 3: Create a Resource Group with Tags
@@ -78,7 +78,7 @@ use a tag such as this one to categorize resource groups for
 administration or budgeting.
 
 ```powershell
-PS> New-AzResourceGroup -Name RG01 -Location "South Central US" -Tag @{Empty=$null; Department="Marketing"}
+PS > New-AzResourceGroup -Name RG01 -Location "South Central US" -Tag @{Empty=$null; Department="Marketing"}
 ```
 
 ### Delete Resource Group
@@ -121,7 +121,7 @@ subscription. The cmdlet prompts you for confirmation and returns no
 output.
 
 ```powershell
-PS C:\>Remove-AzResourceGroup -Name "ContosoRG01"
+PS > Remove-AzResourceGroup -Name "ContosoRG01"
 ```
 
 #### Example 2: Remove a Resource Group Without Confirmation
@@ -133,7 +133,7 @@ by using the pipeline operator. The `Force` parameter suppresses the
 confirmation prompt.
 
 ```powershell
-PS C:\>Get-AzResourceGroup -Name "ContosoRG01" | Remove-AzResourceGroup -Force
+PS > Get-AzResourceGroup -Name "ContosoRG01" | Remove-AzResourceGroup -Force
 ```
 
 ## Reference
