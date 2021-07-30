@@ -21,6 +21,8 @@ after [Connect-AzAccount](https://docs.microsoft.com/en-us/powershell/module/az.
 
 ## PowerShell
 
+### Create Resource Group
+
 The `New-AzResourceGroup` cmdlet creates an Azure resource group. You
 can create a resource group by using just a name and location, and then
 use the New-AzResource cmdlet to create resources to add to the resource
@@ -46,7 +48,7 @@ New-AzResourceGroup
    [<CommonParameters>]
 ```
 
-### Example 1: Create an Empty Resource Group
+#### Example 1: Create an Empty Resource Group
 
 This command creates a resource group that has no resources. You can use
 the [New-AzResource](https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresource)
@@ -57,7 +59,7 @@ cmdlets to add resources and deployments to this resource group.
 PS> New-AzResourceGroup -Name RG01 -Location "South Central US"
 ```
 
-### Example 2: Create an Empty Resource Group Using Positional Parameters
+#### Example 2: Create an Empty Resource Group Using Positional Parameters
 
 This command creates a resource group that has no resources.
 
@@ -65,7 +67,7 @@ This command creates a resource group that has no resources.
 PS> New-AzResourceGroup RG01 "South Central US"
 ```
 
-### Example 3: Create a Resource Group with Tags
+#### Example 3: Create a Resource Group with Tags
 
 This command creates an empty resource group. This command is the same
 as the command in [Example 1](#example-1-create-an-empty-resource-group),
@@ -79,9 +81,65 @@ administration or budgeting.
 PS> New-AzResourceGroup -Name RG01 -Location "South Central US" -Tag @{Empty=$null; Department="Marketing"}
 ```
 
+### Delete Resource Group
+
+The `Remove-AzResourceGroup` cmdlet removes an Azure resource group and
+its resources from the current subscription. To delete a resource, but
+leave the resource group, use the [Remove-AzResource](https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azresource)
+cmdlet.
+
+```powershell
+Remove-AzResourceGroup
+      [-Name] <String>
+      [-Force]
+      [-AsJob]
+      [-ApiVersion <String>]
+      [-Pre]
+      [-DefaultProfile <IAzureContextContainer>]
+      [-WhatIf]
+      [-Confirm]
+      [<CommonParameters>]
+```
+
+```powershell
+Remove-AzResourceGroup
+      -Id <String>
+      [-Force]
+      [-AsJob]
+      [-ApiVersion <String>]
+      [-Pre]
+      [-DefaultProfile <IAzureContextContainer>]
+      [-WhatIf]
+      [-Confirm]
+      [<CommonParameters>]
+```
+
+#### Example 1: Remove a Resource Group
+
+This command removes the **ContosoRG01** resource group from the
+subscription. The cmdlet prompts you for confirmation and returns no
+output.
+
+```powershell
+PS C:\>Remove-AzResourceGroup -Name "ContosoRG01"
+```
+
+#### Example 2: Remove a Resource Group Without Confirmation
+
+This command uses the [Get-AzResourceGroup](https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azresourcegroup)
+cmdlet to get the resource group **ContosoRG01**, and then passes it to
+[Remove-AzResourceGroup](https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azresourcegroup)
+by using the pipeline operator. The `Force` parameter suppresses the
+confirmation prompt.
+
+```powershell
+PS C:\>Get-AzResourceGroup -Name "ContosoRG01" | Remove-AzResourceGroup -Force
+```
+
 ## Reference
 * [Manage Azure Resource Manager Resource Groups By Using The Azure Portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)
 * [Manage Azure Resources By Using Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resources-cli)
 * [Manage Azure resources By Using Azure PowerShell](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resources-powershell)
 * [New-AzResourceGroup](https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroup)
+* [Remove-AzResourceGroup](https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azresourcegroup)
 * [az group](https://docs.microsoft.com/en-us/cli/azure/group)
