@@ -14,11 +14,6 @@ you specify a location for the resource group, you are specifying where
 that metadata is stored. For compliance reasons, you may need to ensure
 that your data is stored in a particular region.
 
-At minimum, a **Resource Group** need to be created with a **Name** and
-**Location**. The **Location** can be obtain using
-[Get-AzResourceProvider](https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azresourceprovider)
-after [Connect-AzAccount](https://docs.microsoft.com/en-us/powershell/module/az.accounts/connect-azaccount).
-
 ## PowerShell
 
 ### Create Resource Group
@@ -33,6 +28,11 @@ cmdlet. To add a resource to an existing resource group, use the
 cmdlet. An Azure resource is a user-managed Azure entity, such as a
 database server, database, or website. An Azure resource group is a
 collection of Azure resources that are deployed as a unit.
+
+At minimum, a **Resource Group** need to be created with a **Name** and
+**Location**. The **Location** can be obtain using
+[Get-AzResourceProvider](https://docs.microsoft.com/en-us/powershell/module/az.resources/get-azresourceprovider)
+after [Connect-AzAccount](https://docs.microsoft.com/en-us/powershell/module/az.accounts/connect-azaccount).
 
 ```powershell
 New-AzResourceGroup
