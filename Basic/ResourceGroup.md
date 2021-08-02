@@ -136,6 +136,51 @@ confirmation prompt.
 PS > Get-AzResourceGroup -Name "ContosoRG01" | Remove-AzResourceGroup -Force
 ```
 
+## Azure CLI
+
+### Create Resource Group
+
+Create a new resource group.
+
+```plaintext
+az group create --location
+                --name
+                [--managed-by]
+                [--subscription]
+                [--tags]
+```
+
+#### Example
+
+Create a new resource group in the West US region.
+
+The `name` and `location` parameters are required. The `location` values
+are from `az account list-locations`. You can configure the default
+location using `az configure --defaults location=<location>`.
+
+```plaintext
+az group create -l westus -n MyResourceGroup
+```
+
+### Delete Resource Group
+
+Delete a resource group.
+
+```plaintext
+az group delete --name
+                [--no-wait]
+                [--subscription]
+                [--yes]
+```
+
+#### Example
+
+Delete a resource group.
+
+```plaintext
+az group delete -n MyResourceGroup
+```
+
 ## Reference
 * [Manage Azure Resource Manager Resource Groups By Using The Azure Portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)
 * [Manage Azure Resources By Using Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resources-cli)
