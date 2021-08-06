@@ -29,12 +29,43 @@ Azure Active Directory tenant named **contoso.onmicrosoft.com**:
 * **Solution:** You instruct User2 to create the user accounts.
 * Does that meet the goal?
 
+Choice
 * A. Yes
 * B. No
 
 #### Correct Answer
 
 **Answer:** A
+
+Only a global administrator can add users to this tenant.
+
+**Reference:** [Add or Delete Users Using Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory)
+
+### Question 2
+
+You have an Azure subscription that contains the following users in an
+Azure Active Directory tenant named **contoso.onmicrosoft.com**:
+
+| Name  | Role                 | Scope                  |
+|-------|----------------------|------------------------|
+| User1 | Global Administrator | Azure Active Directory |
+| User2 | Global Administrator | Azure Active Directory |
+| User3 | User Administrator   | Azure Active Directory |
+| User4 | Owner                | Azure Subscription     |
+
+* **User1** creates a new Azure Active Directory tenant named **external.contoso.onmicrosoft.com**.
+* You need to create new user accounts in **external.contoso.onmicrosoft.com**.
+* **Solution:** You instruct User4 to create the user accounts.
+* Does that meet the goal?
+
+Choice
+
+* A. Yes
+* B. No
+
+#### Correct Answer
+
+**Answer:** B
 
 Only a global administrator can add users to this tenant.
 
