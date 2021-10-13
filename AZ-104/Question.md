@@ -2,189 +2,79 @@
 
 ## Topic 1
 
-**Note:** This question is part of a series of questions that present
-the same scenario. Each question in the series contains a unique
-solution that might meet the stated goals. Some question sets might have
-more than one correct solution, while others might not have a correct
-solution.
-
-After you answer a question in this section, you will NOT be able to
-return to it. As a result, these questions will not appear in the review
-screen.
-
 ### Question 1
+Your company has serval departments. Each department has a number of virtual machines (VMs).
+The company has an Azure subscription that contains a resource group named RG1.
+All VMs are located in RG1.
+You want to associate each VM with its respective department.
+What should you do?
 
-You have an Azure subscription that contains the following users in an
-Azure Active Directory tenant named **contoso.onmicrosoft.com**:
+A. Create Azure Management Groups for each department.
+B. Create a resource group for each department.
+C. Assign tags to the virtual machines.
+D. Modify the settings of the virtual machines.
 
-| Name  | Role                 | Scope                  |
-|-------|----------------------|------------------------|
-| User1 | Global Administrator | Azure Active Directory |
-| User2 | Global Administrator | Azure Active Directory |
-| User3 | User Administrator   | Azure Active Directory |
-| User4 | Owner                | Azure Subscription     |
+**Correct Answer:** C
 
-* **User1** creates a new Azure Active Directory tenant named **external.contoso.onmicrosoft.com**.
-* You need to create new user accounts in **external.contoso.onmicrosoft.com**.
-* **Solution:** You instruct **User2** to create the user accounts.
-* Does that meet the goal?
-
-Choice
-* A. Yes
-* B. No
-
-#### Correct Answer
-
-**Answer:** A
-
-Only a global administrator can add users to this tenant.
-
-**Reference:** [Add or Delete Users Using Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory)
+Reference: [Use tags to organize your Azure resources and management hierarchy](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources)
 
 ### Question 2
+**Note:** The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
+Your company has an Azure Active Directory (Azure AD) subscription.
+You want to implement an Azure AD conditional access policy.
+The policy must be configured to require members of the Global Administrators group to use Multi-Factor Authentication and an Azure AD-joined device when they connect to Azure AD from untrusted locations.
+Solution: You access the multi-factor authentication page to alter the user settings.
+Does the solution meet the goal?
 
-You have an Azure subscription that contains the following users in an
-Azure Active Directory tenant named **contoso.onmicrosoft.com**:
+A. Yes
+B. No
 
-| Name  | Role                 | Scope                  |
-|-------|----------------------|------------------------|
-| User1 | Global Administrator | Azure Active Directory |
-| User2 | Global Administrator | Azure Active Directory |
-| User3 | User Administrator   | Azure Active Directory |
-| User4 | Owner                | Azure Subscription     |
-
-* **User1** creates a new Azure Active Directory tenant named **external.contoso.onmicrosoft.com**.
-* You need to create new user accounts in **external.contoso.onmicrosoft.com**.
-* **Solution:** You instruct **User4** to create the user accounts.
-* Does that meet the goal?
-
-Choice
-
-* A. Yes
-* B. No
-
-#### Correct Answer
-
-**Answer:** B
-
-Only a global administrator can add users to this tenant.
-
-**Reference:** [Add or Delete Users Using Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory)
+**Correct Answer:** B
 
 ### Question 3
+**Note:** The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
+Your company has an Azure Active Directory (Azure AD) subscription.
+You want to implement an Azure AD conditional access policy.
+The policy must be configured to require members of the Global Administrators group to use Multi-Factor Authentication and an Azure AD-joined device when they connect to Azure AD from untrusted locations.
+Solution: You access the Azure portal to alter the session control of the Azure AD conditional access policy.
+Does the solution meet the goal?
 
-You have an Azure subscription that contains the following users in an
-Azure Active Directory tenant named **contoso.onmicrosoft.com**:
+A. Yes
+B. No
 
-| Name  | Role                 | Scope                  |
-|-------|----------------------|------------------------|
-| User1 | Global Administrator | Azure Active Directory |
-| User2 | Global Administrator | Azure Active Directory |
-| User3 | User Administrator   | Azure Active Directory |
-| User4 | Owner                | Azure Subscription     |
+**Correct Answer:** B
 
-* **User1** creates a new Azure Active Directory tenant named **external.contoso.onmicrosoft.com**.
-* You need to create new user accounts in **external.contoso.onmicrosoft.com**.
-* **Solution:** You instruct **User3** to create the user accounts.
-* Does that meet the goal?
-
-Choice
-
-* A. Yes
-* B. No
-
-**Answer:** B
-
-Only a global administrator can add users to this tenant.
-
-**Reference:** [Add or Delete Users Using Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory)
+Reference: [Conditional Access: Require MFA for all users](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa)
 
 ### Question 4
+**Note:** The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
+Your company has an Azure Active Directory (Azure AD) subscription.
+You want to implement an Azure AD conditional access policy.
+The policy must be configured to require members of the Global Administrators group to use Multi-Factor Authentication and an Azure AD-joined device when they connect to Azure AD from untrusted locations.
+Solution: You access the Azure portal to alter the grant control of the Azure AD conditional access policy.
+Does the solution meet the goal?
 
-You have an Azure subscription named **Subscription1** that contains a
-resource group named **RG1**. In **RG1**, you create an internal load
-balancer named LB1 and a public load balancer named **LB2**. You need to
-ensure that an administrator named **Admin1** can manage **LB1** and
-**LB2**. The solution must follow the principle of least privilege.
+A. Yes
+B. No
 
-Which role should you assign to **Admin1** for each task? To answer,
-select the appropriate options in the answer area.
+**Correct Answer:** A
 
-**NOTE:** Each correct selection is worth one point.
-
-#### Correct Answer
-
-* To add a backend pool to **LB1**: Network Contributor on **LB1**
-* To add a health probe to **LB2**: Network Contributor on **LB2**
-
-The **Network Contributor** role lets you manage networks, but not
-access them.
-
-**Reference:** [Azure Built-In Roles](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles)
+Reference: [Conditional Access: Grant](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-conditional-access-grant)
 
 ### Question 5
+You are planning to deploy an Ubuntu Server virtual machine to your company's Azure subscription.
+You are required to implement a custom deployment that includes adding a particular trusted root certification authority (CA).
+Which of the following should you use to create the virtual machine?
 
-You have an Azure subscription that contains an Azure Active Directory
-(Azure AD) tenant named **contoso.com** and an Azure Kubernetes Service
-(AKS) cluster named **AKS1**.
+A. The New-AzureRmVm cmdlet.
+B. The New-AzVM cmdlet.
+C. The Create-AzVM cmdlet.
+D. The az vm create command.
 
-* An administrator reports that she is unable to grant access to **AKS1** to the users in **contoso.com**.
-* You need to ensure that access to **AKS1** can be granted to the **contoso.com** users.
-* What should you do first?
+**Correct Answer:** D
 
-Choice
-* A. From **contoso.com**, modify the Organization relationships settings.
-* B. From **contoso.com**, create an OAuth 2.0 authorization endpoint.
-* C. Recreate **AKS1**.
-* D. From **AKS1**, create a namespace.
+Once `cloud-init.txt` has been created, you can deploy the VM with `az vm create` cmdlet, using the `--custom-data` parameter to provide the full path to the `cloud-init.txt` file.
 
-#### Correct Answer
+Reference: [Tutorial - How to use cloud-init to customize a Linux virtual machine in Azure on first boot](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-automate-vm-deployment)
 
-**Answer:** B
-
-**Reference:** [Kubernetes Authenticating](https://kubernetes.io/docs/reference/access-authn-authz/authentication/)
-
-### Question 6
-
-You have a Microsoft 365 tenant and an Azure Active Directory (Azure AD)
-tenant named **contoso.com**. You plan to grant three users named
-**User1**, **User2**, and **User3** access to a temporary Microsoft
-SharePoint document library named **Library1**. You need to create
-groups for the users. The solution must ensure that the groups are
-deleted automatically after 180 days.
-
-Which two groups should you create? Each correct answer presents a
-complete solution.
-
-**NOTE:** Each correct selection is worth one point.
-
-Choice
-* A. a Microsoft 365 group that uses the Assigned membership type
-* B. a Security group that uses the Assigned membership type
-* C. a Microsoft 365 group that uses the Dynamic User membership type
-* D. a Security group that uses the Dynamic User membership type
-* E. a Security group that uses the Dynamic Device membership type
-
-#### Correct Answer
-
-**Answer:** A, C
-
-You can set expiration policy only for Office 365 groups in Azure Active
-Directory (Azure AD).
-
-**Note:** With the increase in usage of Office 365 Groups,
-administrators and users need a way to clean up unused groups.
-Expiration policies can help remove inactive groups from the system and
-make things cleaner.
-
-When a group expires, all of its associated services (the mailbox,
-Planner, SharePoint site, etc.) are also deleted. You can set up a rule
-for dynamic membership on security groups or Office 365 groups.
-
-**Incorrect Answer:** B, D, E
-
-You can set expiration policy only for Office 365 groups in Azure Active
-Directory (Azure AD).
-
-**Reference:** [Microsoft 365 Group Expiration Policy](https://docs.microsoft.com/en-us/microsoft-365/solutions/microsoft-365-groups-expiration-policy)
 
