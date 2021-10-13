@@ -9,14 +9,14 @@ All VMs are located in RG1.
 You want to associate each VM with its respective department.
 What should you do?
 
-A. Create Azure Management Groups for each department.
-B. Create a resource group for each department.
-C. Assign tags to the virtual machines.
-D. Modify the settings of the virtual machines.
+* A. Create Azure Management Groups for each department.
+* B. Create a resource group for each department.
+* C. Assign tags to the virtual machines.
+* D. Modify the settings of the virtual machines.
 
 **Correct Answer:** C
 
-Reference: [Use tags to organize your Azure resources and management hierarchy](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources)
+**Reference:** [Use tags to organize your Azure resources and management hierarchy](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources)
 
 ### Question 2
 **Note:** The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
@@ -26,8 +26,8 @@ The policy must be configured to require members of the Global Administrators gr
 Solution: You access the multi-factor authentication page to alter the user settings.
 Does the solution meet the goal?
 
-A. Yes
-B. No
+* A. Yes
+* B. No
 
 **Correct Answer:** B
 
@@ -39,8 +39,8 @@ The policy must be configured to require members of the Global Administrators gr
 Solution: You access the Azure portal to alter the session control of the Azure AD conditional access policy.
 Does the solution meet the goal?
 
-A. Yes
-B. No
+* A. Yes
+* B. No
 
 **Correct Answer:** B
 
@@ -54,27 +54,54 @@ The policy must be configured to require members of the Global Administrators gr
 Solution: You access the Azure portal to alter the grant control of the Azure AD conditional access policy.
 Does the solution meet the goal?
 
-A. Yes
-B. No
+* A. Yes
+* B. No
 
 **Correct Answer:** A
 
-Reference: [Conditional Access: Grant](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-conditional-access-grant)
+**Reference:** [Conditional Access: Grant](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-conditional-access-grant)
 
 ### Question 5
 You are planning to deploy an Ubuntu Server virtual machine to your company's Azure subscription.
 You are required to implement a custom deployment that includes adding a particular trusted root certification authority (CA).
 Which of the following should you use to create the virtual machine?
 
-A. The New-AzureRmVm cmdlet.
-B. The New-AzVM cmdlet.
-C. The Create-AzVM cmdlet.
-D. The az vm create command.
+* A. The New-AzureRmVm cmdlet.
+* B. The New-AzVM cmdlet.
+* C. The Create-AzVM cmdlet.
+* D. The az vm create command.
 
 **Correct Answer:** D
 
 Once `cloud-init.txt` has been created, you can deploy the VM with `az vm create` cmdlet, using the `--custom-data` parameter to provide the full path to the `cloud-init.txt` file.
 
-Reference: [Tutorial - How to use cloud-init to customize a Linux virtual machine in Azure on first boot](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-automate-vm-deployment)
+**Reference:** [Tutorial - How to use cloud-init to customize a Linux virtual machine in Azure on first boot](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-automate-vm-deployment)
 
+### Question 6
+**Note:** The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
+Your company makes use of Multi-Factor Authentication for when users are not in the office. The Per Authentication option has been configured as the usage model.
+After the acquisition of a smaller business and the addition of the new staff to Azure Active Directory (Azure AD) obtains a different company and adding the new employees to Azure Active Directory (Azure AD), you are informed that these employees should also make use of Multi-Factor Authentication.
+To achieve this, the Per Enabled User setting must be set for the usage model.
+Solution: You reconfigure the existing usage model via the Azure portal.
+Does the solution meet the goal?
+
+* A. Yes
+* B. No
+
+**Correct Answer:** B
+
+Since it is not possible to change the usage model of an existing provider as it is right now, you have to create a new one and reactivate your existing server with activation credentials from the new provider.
+
+**Reference:** [Switch usage model in Azure Multi-Factor Authentication Server](https://365lab.net/2015/04/11/switch-usage-model-in-azure-multi-factor-authentication-server/)
+
+### Question 7
+**Note:** The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
+Your company's Azure solution makes use of Multi-Factor Authentication for when users are not in the office. The Per Authentication option has been configured as the usage model.
+After the acquisition of a smaller business and the addition of the new staff to Azure Active Directory (Azure AD) obtains a different company and adding the new employees to Azure Active Directory (Azure AD), you are informed that these employees should also make use of Multi-Factor Authentication.
+To achieve this, the Per Enabled User setting must be set for the usage model.
+Solution: You reconfigure the existing usage model via the Azure CLI.
+Does the solution meet the goal?
+
+* A. Yes
+* B. No
 
