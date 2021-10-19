@@ -228,6 +228,7 @@ Does the solution meet the goal?
 
 On a server with Azure AD Connect installed, navigate to the Start menu and select AD Connect, then Synchronization Service.
 
+
 ### Question 11
 
 **Note:** The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
@@ -246,6 +247,7 @@ Does the solution meet the goal?
 * B. No
 
 **Correct Answer:** B
+
 
 ### Question 12
 
@@ -274,3 +276,194 @@ Which of the following Azure stored redundancy options should you recommend?
 RA-GRS allows you to have higher read availability for your storage account by providing "read-only" access to the data replicated to the secondary location. Once you enable this feature, the secondary location may be used to achieve higher availability in the event the data is not available in the primary region. This is an "opt-in" feature which requires the storage account be geo-replicated.
 
 **Reference:** [Azure Storage redundancy](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy)
+
+
+### Question 13
+
+**Note:** The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
+
+Your company has an azure subscription that includes a storage account, a resource group, a blob container and a file share.
+
+A colleague named Jon Ross makes use of a solitary Azure Resource Manager (ARM) template to deploy a virtual machine and an additional Azure Storage account.
+
+You want to review the ARM template that was used by Jon Ross.
+
+Solution: You access the Virtual Machine blade.
+
+Does the solution meet the goal?
+
+* A. Yes
+* B. No
+
+**Correct Answer:** B
+
+You should use the Resource Group blade.
+
+**Reference:** [Use Azure portal to export a template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template)
+
+
+### Question 14
+
+**Note:** The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
+
+Your company has an azure subscription that includes a storage account, a resource group, a blob container and a file share.
+
+A colleague named Jon Ross makes use of a solitary Azure Resource Manager (ARM) template to deploy a virtual machine and an additional Azure Storage account.
+
+You want to review the ARM template that was used by Jon Ross.
+
+Solution: You access the Virtual Machine blade.
+
+Does the solution meet the goal?
+
+* A. Yes
+* B. No
+
+**Correct Answer:** A
+
+To view a template from deployment history:
+1. Go to the resource group for your new resource group. Notice that the portal shows the result of the last deployment. Select this link.
+2. You see a history of deployments for the group. In your case, the portal probably lists only one deployment. Select this deployment.
+3. The portal displays a summary of the deployment. The summary includes the status of the deployment and its operations and the values that you provided for parameters. To see the template that you used for the deployment, select View template.
+
+**Reference:** [Use Azure portal to export a template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/export-template-portal)
+
+
+### Question 15
+
+**Note:** The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
+
+Your company has an azure subscription that includes a storage account, a resource group, a blob container and a file share.
+
+A colleague named Jon Ross makes use of a solitary Azure Resource Manager (ARM) template to deploy a virtual machine and an additional Azure Storage account.
+
+You want to review the ARM template that was used by Jon Ross.
+
+Solution: You access the Container blade.
+
+Does the solution meet the goal?
+
+* A. Yes
+* B. No
+
+**Correct Answer:** B
+
+You should use the Resource Group blade
+
+**Reference:** [Use Azure portal to export a template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/export-template-portal)
+
+
+### Question 16
+
+Your company has three virtual machines (VMs) that are included in an availability set.
+
+You try to resize one of the VMs, which returns an allocation failure message.
+
+It is imperative that the VM is resized.
+
+Which of the following actions should you take?
+
+* A. You should only stop one of the VMs.
+* B. You should stop two of the VMs.
+* C. You should stop all three VMs.
+* D. You should remove the necessary VM from the availability set.
+
+**Correct Answer:** C
+
+If the VM you wish to resize is part of an availability set, then you must stop all VMs in the availability set before changing the size of any VM in the availability set.
+
+The reason all VMs in the availability set must be stopped before performing the resize operation to a size that requires different hardware is that all running VMs in the availability set must be using the same physical hardware cluster. Therefore, if a change of physical hardware cluster is required to change the VM size then all VMs must be first stopped and then restarted one-by-one to a different physical hardware clusters.
+
+**Reference:** [Resize virtual machines](https://azure.microsoft.com/es-es/blog/resize-virtual-machines/)
+
+
+### Question 17
+
+You have an Azure virtual machine (VM) that has a single data disk. You have been tasked with attaching this data disk to another Azure VM.
+
+You need to make sure that your strategy allows for the virtual machines to be offline for the least amount of time possible.
+
+Which of the following is the action you should take FIRST?
+
+* A. Stop the VM that includes the data disk.
+* B. Stop the VM that the data disk must be attached to.
+* C. Detach the data disk.
+* D. Delete the VM that includes the data disk.
+
+**Correct Answer:** C
+
+**Reference:** [How to detach a data disk from a Windows virtual machine](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/detach-disk)
+
+**Reference:** [Attach or detach a data disk to a virtual machine in Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-labs/devtest-lab-attach-detach-data-disk)
+
+
+### Question 18
+
+Your company has an Azure subscription.
+
+You need to deploy a number of Azure virtual machines (VMs) using Azure Resource Manager (ARM) templates. You have been informed that the VMs will be included in a single availability set.
+
+You are required to make sure that the ARM template you configure allows for as many VMs as possible to remain accessible in the event of fabric failure or maintenance.
+
+Which of the following is the value that you should configure for the `platformFaultDomainCount` property?
+
+* A. 10
+* B. 30
+* C. Min Value
+* D. Max Value
+
+**Correct Answer:** D
+
+The number of fault domains for managed availability sets varies by region - either two or three per region.
+
+**Reference:** [Availability options for Azure Virtual Machines](https://docs.microsoft.com/en-us/azure/virtual-machines/availability)
+
+
+### Question 19
+
+Your company has an Azure subscription.
+
+You need to deploy a number of Azure virtual machines (VMs) using Azure Resource Manager (ARM) templates. You have been informed that the VMs will be included in a single availability set.
+
+You are required to make sure that the ARM template you configure allows for as many VMs as possible to remain accessible in the event of fabric failure or maintenance.
+
+Which of the following is the value that you should configure for the `platformUpdateDomainCount` property?
+
+* A. 10
+* B. 20
+* C. 30
+* D. 40
+
+**Correct Answer:** B
+
+**Reference:** [Availability sets overview](https://docs.microsoft.com/en-us/azure/virtual-machines/availability-set-overview)
+
+
+### Question 20
+
+DRAG DROP -
+
+You have downloaded an Azure Resource Manager (ARM) template to deploy numerous virtual machines (VMs). The ARM template is based on a current VM, but must be adapted to reference an administrative password.
+
+You need to make sure that the password cannot be stored in plain text.
+
+You are preparing to create the necessary components to achieve your goal.
+
+Which of the following should you create to achieve your goal? Answer by dragging the correct option from the list to the answer area.
+
+Select and Place:
+
+Option:
+* An Azure Key Vault
+* An Azure Storage Account
+* Azure Active Directory (AD) Identity Protection
+* An access policy
+* An Azure policy
+* A backup policy
+
+Answer:
+* An Azure Key Vault
+* An access policy
+
+You can use a template that allows you to deploy a simple Windows VM by retrieving the password that is stored in a Key Vault. Therefore, the password is never put in plain text in the template parameter file.
+
