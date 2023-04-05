@@ -461,9 +461,116 @@ Option:
 * An Azure policy
 * A backup policy
 
+**Correct Answer:**
+
 Answer:
 * An Azure Key Vault
 * An access policy
 
 You can use a template that allows you to deploy a simple Windows VM by retrieving the password that is stored in a Key Vault. Therefore, the password is never put in plain text in the template parameter file.
 
+
+### Question 21
+
+Your company has an Azure Active Directory (Azure AD) tenant that is configured for hybrid coexistence with the on-premises Active Directory domain.
+
+The on-premise virtual environment consists of virtual machines (VMs) running on Windows Server 2012 R2 Hyper-V host servers.
+
+You have created some PowerShell scripts to automate the configuration of newly created VMs. You plan to create several new VMs.
+
+You need a solution that ensures the scripts are run on the new VMs.
+
+Which of the following is the best solution?
+
+* A. Configure a `SetupComplete.cmd batch` file in the `%windir%\setup\scripts` directory.
+* B. Configure a Group Policy Object (GPO) to run the scripts as logon scripts.
+* C. Configure a Group Policy Object (GPO) to run the scripts as startup scripts.
+* D. Place the scripts in a new virtual hard disk (VHD).
+
+**Correct Answer:** A
+
+After you deploy a Virtual Machine you typically need to make some changes before it's ready to use.
+This is something you can do manually or you could use Remote PowerShell to automate the configuration of your VM after deployment for example.
+But now there's a third alternative available allowing you customize your VM: the CustomScriptextension.
+This CustomScript extension is executed by the VM Agent and it's very straightforward: you specify which files it needs to download from your storage account and which file it needs to execute.
+You can even specify arguments that need to be passed to the script. The only requirement is that you execute a .ps1 file.
+
+**Reference:** [Add a Custom Script to Windows Setup](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup?view=windows-11)
+
+
+### Question 22
+
+Your company has an Azure Active Directory (Azure AD) tenant that is configured for hybrid coexistence with the on-premises Active Directory domain.
+
+You plan to deploy several new virtual machines (VMs) in Azure. The VMs will have the same operating system and custom software requirements.
+
+You configure a reference VM in the on-premise virtual environment. You then generalize the VM to create an image.
+
+You need to upload the image to Azure to ensure that it is available for selection when you create the new Azure VMs.
+
+Which PowerShell cmdlets should you use?
+
+* A. Add-AzVM
+* B. Add-AzVhd
+* C. Add-AzImage
+* D. Add-AzImageDataDisk
+
+**Correct Answer:** B
+
+The Add-AzVhd cmdlet uploads on-premises virtual hard disks, in .vhd file format, to a blob storage account as fixed virtual hard disks.
+
+**Reference:** [Upload a generalized Windows VHD and use it to create new VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/upload-generalized-managed)
+
+
+### Question 23
+
+DRAG DROP -
+
+Your company has an Azure subscription that includes a number of Azure virtual machines (VMs), which are all part of the same virtual network.
+
+Your company also has an on-premises Hyper-V server that hosts a VM, named VM1, which must be replicated to Azure.
+
+Which of the following objects that must be created to achieve this goal? Answer by dragging the correct option from the list to the answer area.
+
+Select and Place:
+
+Option:
+* Hyper-V site
+* Storage account
+* Azure Recovery Service Vault
+* Azure Traffic Manager instance
+* Replication policy
+* Endpoint
+
+**Correct Answer:**
+
+Answer:
+* Hyper-V site
+* Azure Recovery Service Vault
+* Replication policy
+
+**Reference:** [Prepare on-premises Hyper-V servers for disaster recovery to Azure](https://docs.microsoft.com/en-nz/azure/site-recovery/hyper-v-prepare-on-premises-tutorial)
+
+
+### Question 24
+
+Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements.
+
+Your company's Azure subscription includes two Azure networks named VirtualNetworkA and VirtualNetworkB.
+
+VirtualNetworkA includes a VPN gateway that is configured to make use of static routing. Also, a site-to-site VPN connection exists between your companyג€™s on- premises network and VirtualNetworkA.
+
+You have configured a point-to-site VPN connection to VirtualNetworkA from a workstation running Windows 10. After configuring virtual network peering between
+
+VirtualNetworkA and VirtualNetworkB, you confirm that you are able to access VirtualNetworkB from the companyג€™s on-premises network. However, you find that you cannot establish a connection to VirtualNetworkB from the Windows 10 workstation.
+
+You have to make sure that a connection to VirtualNetworkB can be established from the Windows 10 workstation.
+
+Solution: You choose the Allow gateway transit setting on VirtualNetworkA.
+
+Does the solution meet the goal?
+
+* A. Yes
+* B. No
+
+**Correct Answer:**
